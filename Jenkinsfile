@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    docker.build('nginx')
+                    sh 'docker build -t nginx .'
                 }
             }
         }        
