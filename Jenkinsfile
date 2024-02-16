@@ -10,7 +10,7 @@ pipeline {
         }        
         stage('Deploy') {
             agent {
-                label 'agent'
+                label 'slave'
             }
             steps {
                 script {
