@@ -1,13 +1,13 @@
 pipeline {
-    agent any
+    agent {
+        label 'slave'
+    }
     stages {
         stage('Build') {
             steps {
-                script {
-                    sh 'docker build -t nginx .'
-                }
+                sh 'docker build -t mynginsapp .'
             }
-        }        
+        }      
         stage('Deploy') {
             agent {
                 label 'slave'
